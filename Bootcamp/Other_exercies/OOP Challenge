@@ -1,0 +1,50 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Fri Mar 30 20:14:08 2018
+
+@author: dineshkumarrajendran
+"""
+class Account:
+        def __init__(self,acct_owner,acct_balance):
+            self.acct_owner = acct_owner
+            self.acct_balance = acct_balance
+            
+        def __str__(self):
+            return f"Account owner: {self.acct_owner}\nAccount Balance: ${self.acct_balance}"
+        
+            
+        def deposit(self,value):
+            self.acct_balance = self.acct_balance+value
+            print(f"Deposit Accepted\nCurrent Balance is {self.acct_balance}")
+            
+        def withdraw(self,value):
+            if self.acct_balance<value:
+                print("Funds Unavailable")
+            else:
+                self.acct_balance = self.acct_balance-value
+                print(f"Withdraw Accepted\nCurrent Balance is {self.acct_balance}")                
+        
+        
+
+# 1. Instantiate the class
+acct1 = Account('Jose',100)
+
+
+# 2. Print the object
+print(acct1)
+
+
+# 3. Show the account owner attribute
+acct1.acct_owner
+
+# 4. Show the account balance attribute
+acct1.acct_balance
+
+# 5. Make a series of deposits and withdrawals
+acct1.deposit(50)
+
+acct1.withdraw(150)
+
+# 6. Make a withdrawal that exceeds the available balance
+acct1.withdraw(50)

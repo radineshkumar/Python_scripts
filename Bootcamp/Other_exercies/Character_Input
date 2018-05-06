@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Created on Tue Apr 10 04:48:48 2018
+
+@author: dineshkumarrajendran
+"""
+
+from datetime import datetime
+print('\nHello there')
+user_input = input('Pls enter your name!!!!!!!!!!!!  ')
+user_age = int(input('Pls enter your age!!!!!!!!!!  '))
+print('----------------------------------------------')
+print(f'Hello your name is {user_input}')
+print('Your name is {}'.format(user_age))
+print('\033[1;31;47m Your 100th age will be on the year {} \033[0;0m'.format(datetime.now().year + (100-user_age)))
+print ('----------------------------------------------')

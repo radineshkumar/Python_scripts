@@ -1,0 +1,4 @@
+Hello this is Dinesh
+I love Python language
+It's fun to learn Python
+I want to be expert in Python
